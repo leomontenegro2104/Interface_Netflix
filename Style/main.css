@@ -1,0 +1,76 @@
+:root{
+    /*criação de variaiveis de cor para facilitar caso seja necessário mudar a cor do projeto e elas são as cores princpais, ou seja, as que são mais utilizadas*/
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+/* essa tag do * serve para se referenciar a toda a pagina, e é usado para resetar os padroes pre-estabelecidos, nesse caso, tirando a margin, paddin e ajustando o box-sizing a border-box*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementos base*/
+body {
+    /*exemplo de uso da var --preto*/
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container {
+    /*isso possibilitará utilizar o flexbox, que é uma maneira de alinhar os elementos em tela. Por padão a propriedade flex "joga" todos os elementos numa linha, ou seja, um na frente do outro*/
+    display: flex;
+    /*essa propriedade já é default, ou seja, mesmo que eu não tivesse colocado, ela já seria padrão por conta da propriedade flex*/
+    flex-direction: row;;
+    align-items: center;
+    /*cria um espaço entre as tag filhas do container (h2 e nav)*/
+    justify-content: space-between;;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+
+}
+
+header nav a {
+    /*serve para tirar o sublinhado padrão dos links*/
+    text-decoration: none;
+    color: #AAA;
+    /*para distanciar um pouco um link do outro*/
+    margin-right: 10px
+}
+
+/*o uso de :hover representa o evento de mouse over, ou seja, quado o mouse passar por cima dos links, a cor sera alterando, dando um efeito de realce*/
+header nav a:hover {
+    color: #fff;
+}
+
+/*Filme Principal*/
+.filme-principal {
+    font-size:  16px;;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/peaky_blinders.jpg');
+
+    height: 400px;
+    /*objetivo de ajustar a img (background) ao tamanho da caixa*/
+    background-size: cover;
+
+    /*ajustando os elementos em coluna e centralizando eles na coluna*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*alinhar o elementos do lado esquerdo (inicio) da tela*/
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
+
+.titulo {
+    font-size:  40px;
+}
