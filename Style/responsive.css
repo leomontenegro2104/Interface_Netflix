@@ -1,0 +1,20 @@
+/*quando a tela estiver menor que 700px alguns elementos do container header serão ajustados, ex.: os botões*/
+@media screen and (max-width:700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 190px;
+        height: 50px;
+    }
+}
+
+/*quando a tela estivar maior que 1000px o texto fica mais concentrado a esquerda e não toma a tela tola*/
+@media  screen and (min-width:1000px) {
+    .descricao {
+        width: 50%;
+    }
+}
